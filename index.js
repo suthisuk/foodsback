@@ -2,7 +2,7 @@ var express = require("express");
 var cors = require("cors");
 var mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-const port=process.env.PORT || 3000;
+
 
 // คำสั่งเชื่อม MongoDB Atlas
 var mongo_uri = "mongodb+srv://admin:1234@cluster0.jci8r.gcp.mongodb.net/MONGO-TEST?retryWrites=true&w=majority";
@@ -28,7 +28,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // สร้าง server port
-var port = process.env.PORT || 5000;
+const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log("[success] task 1 : listening on port " + port);
 });
